@@ -9,14 +9,8 @@ var express = require('express');
 var connect = require('connect');
 var MemoryStore = express.session.MemoryStore;
 
-var priceFloor = 35;
-var priceRange = 10;
-var volFloor = 80;
-var volRange = 40;
 var sessionStore = new MemoryStore();
 var io;
-var online = [];
-var lastExchangeData = {};
 
 function encryptPassword(password) {
   var shaSum = crypto.createHash('sha256');
@@ -56,43 +50,6 @@ module.exports = {
       });
       
       io.sockets.on('connection', function (socket) {
-        socket.on('clientchat', function (data) {
-          var message = socket.handshake.session.username + ': '
-            + data.message + '\n';
-          socket.emit('chat', { message: message});
-          socket.broadcast.emit('chat', { message: message});
-        });
-        
-        socket.on('message', function (message) {
-          console.log("Got message: " + message);
-          var ip = socket.handshake.address.address;
-          var url = message;
-          io.sockets.emit('pageview', { 'connections': Object.keys(io.connected).length, 'ip': '***.***.***.' + ip.substring(ip.lastIndexOf('.') + 1), 'url': url, 'xdomain': socket.handshake.xdomain, 'timestamp': new Date()});
-        });
-
-        socket.on('disconnect', function (data) {
-          var username = socket.handshake.session.username;
-          var index = online.indexOf(username);
-          online.splice(index, 1);
-          io.sockets.emit('pageview', { 'connections': Object.keys(io.connected).length});
-          socket.broadcast.emit('disconnect', { username: username});
-        });
-        
-        socket.on('joined', function (data) {
-          online.push(socket.handshake.session.username);
-          var message = socket.handshake.session.username + ': ' + data.message + '\n';
-          
-          var message = 'Admin: ' + socket.handshake.session.username
-            + ' has joined\n';
-          socket.emit('chat', { message: message, users: online});
-          socket.broadcast.emit('chat', { message: message, username: socket.handshake.session.username});
-        });
-        
-        socket.on('requestData', function (data) {
-          socket.emit('initExchangeData'
-            , {exchangeData: transformExchangeData(lastExchangeData)});
-        });
-        
         socket.on('addFeedback', function (data) {
           module.exports.getUserById(socket.handshake.session._id, function(err, user) {
             module.exports.createFeedback(user.token, data.feedback, function(err, numUpdates) {
