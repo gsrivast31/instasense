@@ -2,7 +2,7 @@ instasense
 ==========
 
 This is a sample application for submitting feedbacks. 
-It uses Node.JS, express, Mongodb, Bootstrap and Socket.IO.
+It uses Node.JS, express, Mongodb, Bootstrap, Backbone and Socket.IO.
 
 You need to have node and mongo installed for running this application.
 To run the application, run following
