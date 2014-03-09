@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootstrap, from Twitter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="dist/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="dist/css/docs.css">
+<link href="dist/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="/css/instasense.css" rel="stylesheet">
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="brand" href="#">InstaSense</a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="offset2 span8">
+      <h3>Welcome to InstaSense</h3>
+	  <p>Here you can manage your feedbacks.</p>
+	  <div class="tabbable" style="margin-bottom: 18px;">
+  	    <ul class="nav nav-tabs">
+    	  <li class="active"><a href="#tab1" data-toggle="tab">Feedbacks</a></li>
+    	  <li><a href="#tab2" data-toggle="tab">Statistics</a></li>
+  		</ul>
+  	    <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+          <div class="tab-pane active" id="tab1">
+            <div class="well form-search">
+              <input id="feedback" type="text" class="input-medium search-query feedback" name="feedback">
+              <button id="add-feedback" class="btn">Add Feedback</button>
+            </div>
+            <table class="table table-striped table-bordered table-condensed">
+              <tbody class="feedback-list">
+              </tbody>
+            </table>
+          </div>
+		  <div class="tab-pane" id="tab2">
+		  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="dist/js/jquery.js"></script> 
+<script src="dist/js/google-code-prettify/prettify.js"></script>
+<script src="dist/js/bootstrap-transition.js"></script> 
+<script src="dist/js/bootstrap-alert.js"></script> 
+<script src="dist/js/bootstrap-modal.js"></script> 
+<script src="dist/js/bootstrap-dropdown.js"></script> 
+<script src="dist/js/bootstrap-scrollspy.js"></script> 
+<script src="dist/js/bootstrap-tab.js"></script> 
+<script src="dist/js/bootstrap-tooltip.js"></script> 
+<script src="dist/js/bootstrap-popover.js"></script> 
+<script src="dist/js/bootstrap-button.js"></script> 
+<script src="dist/js/bootstrap-collapse.js"></script> 
+<script src="dist/js/bootstrap-carousel.js"></script> 
+<script src="dist/js/bootstrap-typeahead.js"></script>
+<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+<script src="http://backbonejs.org/backbone-min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/js/dashboard.js"></script>
+<script type="text/javascript" src="/js/socket.js"></script>
+
+</body>
+</html>

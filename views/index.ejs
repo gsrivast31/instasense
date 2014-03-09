@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>InstaSense</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="dist/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="dist/css/docs.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="dist/css/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="dist/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="dist/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="dist/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="dist/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="dist/ico/reminder.jpg">
+</head>
+<body>
+<div id="myModal" class="modal hide fade smallModal">
+  <form id="signup-form" action="/signup" method="post" class="form-horizontal">
+  <div class="modal-header"><a data-dismiss="modal"  class="close"></a>
+    <h3>Sign Up Today</h3></div>
+    <div class="modal-body">
+      <fieldset>
+        <div class="control-group">
+          <input type="text" name="email" placeholder="Email" class="input-xlarge"/>
+        </div>
+        <div class="control-group">
+          <input type="password" name="password" placeholder="Password" class="input-xlarge"/>
+        </div>
+      </fieldset>
+    </div>
+    <div class="modal-footer"><a href="#" data-dismiss="modal" class="btn">Close</a>
+      <button class="btn btn-primary create-button" type="submit">Create Account</button>
+    </div>
+  </form>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="brand" href="#">InstaSense</a>
+      <div class="nav-collapse collapse">
+        <form class="navbar-form pull-right" action="/signin" method="post" >
+          <input class="span2" type="text" name="emailid" placeholder="Email">
+          <input class="span2" type="password" name="passwd" placeholder="Password">
+          <button type="submit" class="btn btn-danger">Sign in</button>
+        </form>
+      </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+<div class="marketing">
+  <p class="marketing-byline">Welcome to InstaSense</p>
+  <img src="dist/img/reminder.jpg">
+  <div class="row offset2">
+    <div class="span8"><h2>Real Time Feedback</h2>
+    <p>Here you will be able to sign up for an account and
+       see list of feedbacks users have created.
+    </p> 
+    </div>
+  </div>
+  <p> <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Sign Up!</a> </p>
+</div>
+
+<!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="dist/js/jquery.js"></script> 
+<script src="dist/js/bootstrap-transition.js"></script> 
+<script src="dist/js/bootstrap-alert.js"></script> 
+<script src="dist/js/bootstrap-modal.js"></script> 
+<script src="dist/js/bootstrap-dropdown.js"></script> 
+<script src="dist/js/bootstrap-scrollspy.js"></script> 
+<script src="dist/js/bootstrap-tab.js"></script> 
+<script src="dist/js/bootstrap-tooltip.js"></script> 
+<script src="dist/js/bootstrap-popover.js"></script> 
+<script src="dist/js/bootstrap-button.js"></script> 
+<script src="dist/js/bootstrap-collapse.js"></script> 
+<script src="dist/js/bootstrap-carousel.js"></script> 
+<script src="dist/js/bootstrap-typeahead.js"></script>
+<script type="text/javascript" src="/js/instaclient.js"></script>
+</body>
+</html>

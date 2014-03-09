@@ -1,0 +1,20 @@
+{
+  "name": "instasense",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "ejs": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "jquery": "*",
+    "mocha": "*",
+    "socket.io": "*",
+    "cookie": "*",
+    "connect": "*"
+  }
+}
